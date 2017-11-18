@@ -12,8 +12,8 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="retrieve" compatibility="7.6.001" expanded="true" height="68" name="Retrieve account" width="90" x="45" y="34">
-        <parameter key="repository_entry" value="//Projeto/data/account"/>
+      <operator activated="true" class="retrieve" compatibility="7.6.001" expanded="true" height="68" name="Retrieve loan_test" width="90" x="45" y="34">
+        <parameter key="repository_entry" value="../data/loan_test"/>
       </operator>
       <operator activated="true" class="numerical_to_polynominal" compatibility="7.6.001" expanded="true" height="82" name="Numerical to Polynominal" width="90" x="179" y="34">
         <parameter key="attribute_filter_type" value="single"/>
@@ -38,9 +38,9 @@
         <parameter key="keep_old_attribute" value="false"/>
       </operator>
       <operator activated="true" class="store" compatibility="7.6.001" expanded="true" height="68" name="Store" width="90" x="447" y="34">
-        <parameter key="repository_entry" value="../data/account"/>
+        <parameter key="repository_entry" value="../data/loan_test"/>
       </operator>
-      <connect from_op="Retrieve account" from_port="output" to_op="Numerical to Polynominal" to_port="example set input"/>
+      <connect from_op="Retrieve loan_test" from_port="output" to_op="Numerical to Polynominal" to_port="example set input"/>
       <connect from_op="Numerical to Polynominal" from_port="example set output" to_op="Nominal to Date" to_port="example set input"/>
       <connect from_op="Nominal to Date" from_port="example set output" to_op="Store" to_port="input"/>
       <connect from_op="Store" from_port="through" to_port="result 1"/>
