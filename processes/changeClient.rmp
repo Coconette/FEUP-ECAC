@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="7.6.003">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="7.6.003" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="retrieve" compatibility="7.6.003" expanded="true" height="68" name="Retrieve client" width="90" x="45" y="34">
+        <parameter key="repository_entry" value="../data/client"/>
+      </operator>
+      <operator activated="true" class="generate_attributes" compatibility="7.6.003" expanded="true" height="82" name="Generate Attributes" width="90" x="179" y="34">
+        <list key="function_descriptions">
+          <parameter key="birth_day" value="birth_number%100"/>
+          <parameter key="birth_month" value="((birth_number%10000) - birth_day)/100"/>
+          <parameter key="birth_year" value="(birth_number - birth_month*100 - birth_day) / 10000"/>
+          <parameter key="gender" value="&quot;a&quot;"/>
+        </list>
+        <parameter key="keep_all" value="true"/>
+      </operator>
+      <operator activated="true" class="r_scripting:execute_r" compatibility="7.2.000" expanded="true" height="82" name="Execute R" width="90" x="313" y="34">
+        <parameter key="script" value="# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none)&#10;# output can be found in Log View&#10;&#10;rm_main = function(data)&#10;{&#10;&#9;ids &lt;- data[,1]&#10;&#9;districts &lt;- data[,3]&#10;&#9;days &lt;- data[,4]&#10;&#9;months &lt;- data[,5]&#10;&#9;years &lt;- data[,6]&#10;&#9;genders &lt;- data[,7]&#10;&#9;size &lt;- nrow(months)&#10;&#9;# your code goes here&#10;&#9;for (i in 1:size){&#10;&#9;&#9;if(months[i] &gt; 12){&#10;&#9;&#9;&#9;months[i] &lt;- months[i] - 50&#10;&#9;&#9;&#9;genders[i] &lt;- c(&quot;f&quot;)&#10;&#9;&#9;}&#10;&#9;&#9;else {&#10;&#9;&#9;&#9;genders[i] &lt;- c(&quot;m&quot;)&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;return (data.frame(ids, districts, days, months, years, genders))&#10;}&#10;"/>
+      </operator>
+      <operator activated="true" class="generate_attributes" compatibility="7.6.003" expanded="true" height="82" name="Generate Attributes (2)" width="90" x="447" y="34">
+        <list key="function_descriptions">
+          <parameter key="birth_date" value="birth_day+100*birth_month+10000*birth_year"/>
+        </list>
+        <parameter key="keep_all" value="true"/>
+      </operator>
+      <operator activated="true" class="numerical_to_polynominal" compatibility="7.6.003" expanded="true" height="82" name="Numerical to Polynominal" width="90" x="581" y="187">
+        <parameter key="attribute_filter_type" value="single"/>
+        <parameter key="attribute" value="birth_date"/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="numeric"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="nominal_to_date" compatibility="7.6.003" expanded="true" height="82" name="Nominal to Date" width="90" x="715" y="34">
+        <parameter key="attribute_name" value="birth_date"/>
+        <parameter key="date_type" value="date"/>
+        <parameter key="date_format" value="YYmmdd"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="keep_old_attribute" value="true"/>
+      </operator>
+      <connect from_op="Retrieve client" from_port="output" to_op="Generate Attributes" to_port="example set input"/>
+      <connect from_op="Generate Attributes" from_port="example set output" to_op="Execute R" to_port="input 1"/>
+      <connect from_op="Execute R" from_port="output 1" to_op="Generate Attributes (2)" to_port="example set input"/>
+      <connect from_op="Generate Attributes (2)" from_port="example set output" to_op="Numerical to Polynominal" to_port="example set input"/>
+      <connect from_op="Numerical to Polynominal" from_port="example set output" to_op="Nominal to Date" to_port="example set input"/>
+      <connect from_op="Nominal to Date" from_port="example set output" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
