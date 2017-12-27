@@ -15,28 +15,28 @@
       <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve account1" width="90" x="45" y="34">
         <parameter key="repository_entry" value="//Projeto/data/originais/account1"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve card_test" width="90" x="45" y="136">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve card_test" width="90" x="45" y="646">
         <parameter key="repository_entry" value="//Projeto/data/originais/card_test"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve client" width="90" x="45" y="340">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve client" width="90" x="45" y="136">
         <parameter key="repository_entry" value="//Projeto/data/originais/client"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve card_train" width="90" x="45" y="238">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve card_train" width="90" x="45" y="748">
         <parameter key="repository_entry" value="//Projeto/data/originais/card_train"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve disp" width="90" x="45" y="442">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve disp" width="90" x="45" y="238">
         <parameter key="repository_entry" value="//Projeto/data/originais/disp"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve district" width="90" x="45" y="952">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve district" width="90" x="45" y="340">
         <parameter key="repository_entry" value="//Projeto/data/originais/district"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve loan_test" width="90" x="45" y="850">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve loan_test" width="90" x="45" y="544">
         <parameter key="repository_entry" value="//Projeto/data/originais/loan_test"/>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve loan_train" width="90" x="45" y="544">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve loan_train" width="90" x="45" y="442">
         <parameter key="repository_entry" value="//Projeto/data/originais/loan_train"/>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="loan_train_date" width="90" x="179" y="544">
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="loan_train_date" width="90" x="179" y="442">
         <process expanded="true">
           <operator activated="true" class="numerical_to_polynominal" compatibility="8.0.001" expanded="true" height="82" name="Numerical to Polynominal (6)" width="90" x="45" y="34">
             <parameter key="attribute_filter_type" value="single"/>
@@ -69,10 +69,10 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve trans_test" width="90" x="45" y="646">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve trans_test" width="90" x="45" y="850">
         <parameter key="repository_entry" value="//Projeto/data/originais/trans_test"/>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="trans_test_date" width="90" x="179" y="646">
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="trans_test_date" width="90" x="179" y="850">
         <process expanded="true">
           <operator activated="true" class="numerical_to_polynominal" compatibility="8.0.001" expanded="true" height="82" name="Numerical to Polynominal (7)" width="90" x="45" y="34">
             <parameter key="attribute_filter_type" value="single"/>
@@ -105,10 +105,10 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve trans_train" width="90" x="45" y="748">
+      <operator activated="true" class="retrieve" compatibility="8.0.001" expanded="true" height="68" name="Retrieve trans_train" width="90" x="45" y="952">
         <parameter key="repository_entry" value="//Projeto/data/originais/trans_train"/>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="trans_train_date" width="90" x="179" y="748">
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="trans_train_date" width="90" x="179" y="952">
         <process expanded="true">
           <operator activated="true" class="numerical_to_polynominal" compatibility="8.0.001" expanded="true" height="82" name="Numerical to Polynominal (8)" width="90" x="45" y="34">
             <parameter key="attribute_filter_type" value="single"/>
@@ -165,16 +165,29 @@
             <parameter key="locale" value="English (United States)"/>
             <parameter key="keep_old_attribute" value="false"/>
           </operator>
+          <operator activated="true" class="rename" compatibility="8.0.001" expanded="true" height="82" name="Rename" width="90" x="313" y="34">
+            <parameter key="old_name" value="date"/>
+            <parameter key="new_name" value="account_date"/>
+            <list key="rename_additional_attributes">
+              <parameter key="district_id" value="acount_district_id"/>
+            </list>
+          </operator>
           <connect from_port="in 1" to_op="Numerical to Polynominal" to_port="example set input"/>
           <connect from_op="Numerical to Polynominal" from_port="example set output" to_op="Nominal to Date" to_port="example set input"/>
-          <connect from_op="Nominal to Date" from_port="example set output" to_port="out 1"/>
+          <connect from_op="Nominal to Date" from_port="example set output" to_op="Rename" to_port="example set input"/>
+          <connect from_op="Rename" from_port="example set output" to_port="out 1"/>
           <portSpacing port="source_in 1" spacing="0"/>
           <portSpacing port="source_in 2" spacing="0"/>
           <portSpacing port="sink_out 1" spacing="0"/>
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="card_test_date" width="90" x="179" y="136">
+      <operator activated="true" class="set_role" compatibility="8.0.001" expanded="true" height="82" name="Set Role (3)" width="90" x="447" y="34">
+        <parameter key="attribute_name" value="account_id"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="card_test_date" width="90" x="179" y="646">
         <process expanded="true">
           <operator activated="true" class="numerical_to_polynominal" compatibility="8.0.001" expanded="true" height="82" name="Numerical to Polynominal (2)" width="90" x="45" y="34">
             <parameter key="attribute_filter_type" value="single"/>
@@ -207,7 +220,7 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="card_train_date" width="90" x="179" y="238">
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="card_train_date" width="90" x="179" y="748">
         <process expanded="true">
           <operator activated="true" class="numerical_to_polynominal" compatibility="8.0.001" expanded="true" height="82" name="Numerical to Polynominal (3)" width="90" x="45" y="34">
             <parameter key="attribute_filter_type" value="single"/>
@@ -240,7 +253,7 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="client_date" width="90" x="179" y="340">
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="client_date" width="90" x="179" y="136">
         <process expanded="true">
           <operator activated="true" class="generate_attributes" compatibility="8.0.001" expanded="true" height="82" name="Generate Attributes" width="90" x="45" y="34">
             <list key="function_descriptions">
@@ -309,7 +322,7 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="103" name="client_disp_join" width="90" x="313" y="391">
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="103" name="client_disp_join" width="90" x="313" y="187">
         <process expanded="true">
           <operator activated="true" class="set_role" compatibility="8.0.001" expanded="true" height="82" name="Set Role" width="90" x="45" y="34">
             <parameter key="attribute_name" value="client_id"/>
@@ -355,7 +368,19 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
-      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="loan_test_date" width="90" x="179" y="850">
+      <operator activated="true" class="set_role" compatibility="8.0.001" expanded="true" height="82" name="Set Role (4)" width="90" x="447" y="136">
+        <parameter key="attribute_name" value="account_id"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="join" compatibility="8.0.001" expanded="true" height="82" name="Join (2)" width="90" x="581" y="34">
+        <parameter key="remove_double_attributes" value="false"/>
+        <parameter key="join_type" value="inner"/>
+        <parameter key="use_id_attribute_as_key" value="true"/>
+        <list key="key_attributes"/>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="loan_test_date" width="90" x="179" y="544">
         <process expanded="true">
           <operator activated="true" class="numerical_to_polynominal" compatibility="8.0.001" expanded="true" height="82" name="Numerical to Polynominal (5)" width="90" x="45" y="34">
             <parameter key="attribute_filter_type" value="single"/>
@@ -388,6 +413,136 @@
           <portSpacing port="sink_out 2" spacing="0"/>
         </process>
       </operator>
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="82" name="rem_disp_&amp;_add_num" width="90" x="715" y="34">
+        <process expanded="true">
+          <operator activated="true" class="multiply" compatibility="8.0.001" expanded="true" height="103" name="Multiply" width="90" x="45" y="34"/>
+          <operator activated="true" class="select_attributes" compatibility="8.0.001" expanded="true" height="82" name="Select Attributes (3)" width="90" x="179" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="type"/>
+            <parameter key="attributes" value=""/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="true"/>
+            <parameter key="include_special_attributes" value="false"/>
+          </operator>
+          <operator activated="true" class="filter_examples" compatibility="8.0.001" expanded="true" height="103" name="Filter Examples (2)" width="90" x="313" y="34">
+            <parameter key="parameter_expression" value="type == &quot;OWNER&quot;"/>
+            <parameter key="condition_class" value="expression"/>
+            <parameter key="invert_filter" value="false"/>
+            <list key="filters_list"/>
+            <parameter key="filters_logic_and" value="true"/>
+            <parameter key="filters_check_metadata" value="true"/>
+          </operator>
+          <operator activated="true" class="generate_attributes" compatibility="8.0.001" expanded="true" height="82" name="Generate Attributes (3)" width="90" x="179" y="136">
+            <list key="function_descriptions">
+              <parameter key="num_of_disps" value="0"/>
+            </list>
+            <parameter key="keep_all" value="true"/>
+          </operator>
+          <operator activated="true" class="r_scripting:execute_r" compatibility="7.2.000" expanded="true" height="82" name="Execute R (2)" width="90" x="313" y="136">
+            <parameter key="script" value="rm_main = function(data)&#10;{&#10;&#9;ids &lt;- data[,8]&#10;&#9;types &lt;- data[,9]&#10;&#9;disps &lt;- data[,10]&#10;&#9;size &lt;- nrow(ids)&#10;&#9;&#10;&#9;for (i in 1:size){&#10;&#9;&#9;print(ids[i]);&#10;&#9;&#9;print(types[i]);&#10;&#9;&#9;print(disps[i]);&#10;&#9;&#9;if(types[i] == &quot;OWNER&quot;){&#10;&#9;&#9;&#9;if(types[i+1] == &quot;DISPONENT&quot; &amp;&amp; size &gt; i){&#10;&#9;&#9;&#9;&#9;if(types[i+2] == &quot;DISPONENT&quot; &amp;&amp; size &gt; i+1){&#10;&#9;&#9;&#9;&#9;&#9;if(types[i+3] == &quot;DISPONENT&quot; &amp;&amp; size &gt; i+2){&#10;&#9;&#9;&#9;&#9;&#9;&#9;disps[i] &lt;- c(3);&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;&#9;else{&#10;&#9;&#9;&#9;&#9;&#9;&#9;disps[i] &lt;- c(2);&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;else{&#10;&#9;&#9;&#9;&#9;&#9;disps[i] &lt;- c(1);&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;else{&#10;&#9;&#9;&#9;&#9;disps[i] &lt;- c(0);&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;&#9;else{&#10;&#9;&#9;&#9;disps[i] &lt;- c(0);&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;return (data.frame(ids,types,disps))&#10;}&#10;"/>
+          </operator>
+          <operator activated="true" class="filter_examples" compatibility="8.0.001" expanded="true" height="103" name="Filter Examples" width="90" x="447" y="136">
+            <parameter key="parameter_expression" value="type == &quot;OWNER&quot;"/>
+            <parameter key="condition_class" value="expression"/>
+            <parameter key="invert_filter" value="false"/>
+            <list key="filters_list"/>
+            <parameter key="filters_logic_and" value="true"/>
+            <parameter key="filters_check_metadata" value="true"/>
+          </operator>
+          <operator activated="true" class="join" compatibility="8.0.001" expanded="true" height="82" name="Join (3)" width="90" x="581" y="34">
+            <parameter key="remove_double_attributes" value="true"/>
+            <parameter key="join_type" value="inner"/>
+            <parameter key="use_id_attribute_as_key" value="true"/>
+            <list key="key_attributes"/>
+            <parameter key="keep_both_join_attributes" value="false"/>
+          </operator>
+          <operator activated="true" class="select_attributes" compatibility="8.0.001" expanded="true" height="82" name="Select Attributes (4)" width="90" x="715" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="type"/>
+            <parameter key="attributes" value=""/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="true"/>
+            <parameter key="include_special_attributes" value="true"/>
+          </operator>
+          <connect from_port="in 1" to_op="Multiply" to_port="input"/>
+          <connect from_op="Multiply" from_port="output 1" to_op="Select Attributes (3)" to_port="example set input"/>
+          <connect from_op="Multiply" from_port="output 2" to_op="Generate Attributes (3)" to_port="example set input"/>
+          <connect from_op="Select Attributes (3)" from_port="example set output" to_op="Filter Examples (2)" to_port="example set input"/>
+          <connect from_op="Filter Examples (2)" from_port="example set output" to_op="Join (3)" to_port="left"/>
+          <connect from_op="Generate Attributes (3)" from_port="example set output" to_op="Execute R (2)" to_port="input 1"/>
+          <connect from_op="Execute R (2)" from_port="output 1" to_op="Filter Examples" to_port="example set input"/>
+          <connect from_op="Filter Examples" from_port="example set output" to_op="Join (3)" to_port="right"/>
+          <connect from_op="Join (3)" from_port="join" to_op="Select Attributes (4)" to_port="example set input"/>
+          <connect from_op="Select Attributes (4)" from_port="example set output" to_port="out 1"/>
+          <portSpacing port="source_in 1" spacing="0"/>
+          <portSpacing port="source_in 2" spacing="0"/>
+          <portSpacing port="sink_out 1" spacing="0"/>
+          <portSpacing port="sink_out 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="8.0.001" expanded="true" height="103" name="Multiply (2)" width="90" x="514" y="340"/>
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="103" name="join_test" width="90" x="715" y="442">
+        <process expanded="true">
+          <operator activated="true" class="set_role" compatibility="8.0.001" expanded="true" height="82" name="Set Role (5)" width="90" x="45" y="85">
+            <parameter key="attribute_name" value="account_id"/>
+            <parameter key="target_role" value="id"/>
+            <list key="set_additional_roles"/>
+          </operator>
+          <operator activated="true" class="join" compatibility="8.0.001" expanded="true" height="82" name="Join (5)" width="90" x="179" y="34">
+            <parameter key="remove_double_attributes" value="true"/>
+            <parameter key="join_type" value="inner"/>
+            <parameter key="use_id_attribute_as_key" value="true"/>
+            <list key="key_attributes"/>
+            <parameter key="keep_both_join_attributes" value="false"/>
+          </operator>
+          <connect from_port="in 1" to_op="Set Role (5)" to_port="example set input"/>
+          <connect from_port="in 2" to_op="Join (5)" to_port="left"/>
+          <connect from_op="Set Role (5)" from_port="example set output" to_op="Join (5)" to_port="right"/>
+          <connect from_op="Join (5)" from_port="join" to_port="out 1"/>
+          <portSpacing port="source_in 1" spacing="0"/>
+          <portSpacing port="source_in 2" spacing="0"/>
+          <portSpacing port="source_in 3" spacing="0"/>
+          <portSpacing port="sink_out 1" spacing="0"/>
+          <portSpacing port="sink_out 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="subprocess" compatibility="8.0.001" expanded="true" height="103" name="join_train" width="90" x="715" y="289">
+        <process expanded="true">
+          <operator activated="true" class="set_role" compatibility="8.0.001" expanded="true" height="82" name="Set Role (6)" width="90" x="45" y="85">
+            <parameter key="attribute_name" value="account_id"/>
+            <parameter key="target_role" value="id"/>
+            <list key="set_additional_roles"/>
+          </operator>
+          <operator activated="true" class="join" compatibility="8.0.001" expanded="true" height="82" name="Join (4)" width="90" x="179" y="34">
+            <parameter key="remove_double_attributes" value="true"/>
+            <parameter key="join_type" value="inner"/>
+            <parameter key="use_id_attribute_as_key" value="true"/>
+            <list key="key_attributes"/>
+            <parameter key="keep_both_join_attributes" value="false"/>
+          </operator>
+          <connect from_port="in 1" to_op="Set Role (6)" to_port="example set input"/>
+          <connect from_port="in 2" to_op="Join (4)" to_port="left"/>
+          <connect from_op="Set Role (6)" from_port="example set output" to_op="Join (4)" to_port="right"/>
+          <connect from_op="Join (4)" from_port="join" to_port="out 1"/>
+          <portSpacing port="source_in 1" spacing="0"/>
+          <portSpacing port="source_in 2" spacing="0"/>
+          <portSpacing port="source_in 3" spacing="0"/>
+          <portSpacing port="sink_out 1" spacing="0"/>
+          <portSpacing port="sink_out 2" spacing="0"/>
+        </process>
+      </operator>
       <connect from_op="Retrieve account1" from_port="output" to_op="account_date" to_port="in 1"/>
       <connect from_op="Retrieve card_test" from_port="output" to_op="card_test_date" to_port="in 1"/>
       <connect from_op="Retrieve client" from_port="output" to_op="client_date" to_port="in 1"/>
@@ -395,13 +550,21 @@
       <connect from_op="Retrieve disp" from_port="output" to_op="client_disp_join" to_port="in 2"/>
       <connect from_op="Retrieve loan_test" from_port="output" to_op="loan_test_date" to_port="in 1"/>
       <connect from_op="Retrieve loan_train" from_port="output" to_op="loan_train_date" to_port="in 1"/>
+      <connect from_op="loan_train_date" from_port="out 1" to_op="join_train" to_port="in 1"/>
       <connect from_op="Retrieve trans_test" from_port="output" to_op="trans_test_date" to_port="in 1"/>
       <connect from_op="Retrieve trans_train" from_port="output" to_op="trans_train_date" to_port="in 1"/>
+      <connect from_op="account_date" from_port="out 1" to_op="Set Role (3)" to_port="example set input"/>
+      <connect from_op="Set Role (3)" from_port="example set output" to_op="Join (2)" to_port="left"/>
       <connect from_op="client_date" from_port="out 1" to_op="client_disp_join" to_port="in 1"/>
-      <connect from_op="client_disp_join" from_port="out 1" to_port="result 1"/>
+      <connect from_op="client_disp_join" from_port="out 1" to_op="Set Role (4)" to_port="example set input"/>
+      <connect from_op="Set Role (4)" from_port="example set output" to_op="Join (2)" to_port="right"/>
+      <connect from_op="Join (2)" from_port="join" to_op="rem_disp_&amp;_add_num" to_port="in 1"/>
+      <connect from_op="loan_test_date" from_port="out 1" to_op="join_test" to_port="in 1"/>
+      <connect from_op="rem_disp_&amp;_add_num" from_port="out 1" to_op="Multiply (2)" to_port="input"/>
+      <connect from_op="Multiply (2)" from_port="output 1" to_op="join_train" to_port="in 2"/>
+      <connect from_op="Multiply (2)" from_port="output 2" to_op="join_test" to_port="in 2"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
-      <portSpacing port="sink_result 2" spacing="0"/>
     </process>
   </operator>
 </process>
