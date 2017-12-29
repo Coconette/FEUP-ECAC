@@ -1,0 +1,112 @@
+trans_id;account_id;date;type;operation;amount;balance;k_symbol;bank;account
+1548749;5270;930113;credit;credit in cash;800.00;800.00;;;
+1548750;5270;930114;credit;collection from another bank;44749.00;45549.00;;IJ;80269753
+3393738;11265;930114;credit;credit in cash;1000.00;1000.00;;;
+3122924;10364;930117;credit;credit in cash;1100.00;1100.00;;;
+1121963;3834;930119;credit;credit in cash;700.00;700.00;;;
+2809952;9307;930124;credit;credit in cash;900.00;900.00;;;
+1736607;5891;930125;credit;credit in cash;900.00;900.00;;;
+1910780;6473;930126;credit;credit in cash;1100.00;1100.00;;;
+1910790;6473;930126;credit;credit in cash;19961.00;21061.00;;;
+541681;1843;930130;credit;credit in cash;1000.00;1000.00;;;
+3453599;6473;930131;credit;;17.00;21078.00;interest credited;;
+2809959;9307;930131;credit;credit in cash;5282.00;6182.00;;;
+3669814;5270;930131;credit;;110.20;45659.20;interest credited;;
+3479816;9307;930131;credit;;0.80;6182.80;interest credited;;
+2797771;9265;930204;credit;credit in cash;300.00;300.00;;;
+3393740;11265;930205;credit;credit in cash;7618.00;8618.00;;;
+541683;1843;930207;credit;collection from another bank;17632.00;18632.00;;QR;76294219
+2442343;8051;930207;credit;credit in cash;200.00;200.00;;;
+3122926;10364;930207;credit;credit in cash;14493.00;15593.00;;;
+2349697;7753;930208;credit;credit in cash;600.00;600.00;;;
+1657153;5622;930208;credit;credit in cash;700.00;700.00;;;
+2775579;9188;930208;credit;credit in cash;800.00;800.00;;;
+237649;813;930210;credit;credit in cash;1100.00;1100.00;;;
+237651;813;930211;credit;collection from another bank;12154.00;13254.00;;QR;19537103
+2349709;7753;930212;credit;credit in cash;19588.00;20188.00;;;
+2349705;7753;930212;credit;credit in cash;27078.00;47266.00;;;
+1736609;5891;930212;credit;collection from another bank;32594.00;33494.00;;CD;51054984
+1549098;5270;930212;withdrawal;withdrawal in cash;9600.00;36059.20;;;
+1121965;3834;930212;credit;credit in cash;13875.00;14575.00;;;
+527445;1801;930213;credit;credit in cash;700.00;700.00;;;
+3394148;11265;930213;credit;credit in cash;9800.00;18418.00;;;
+3314624;11013;930214;credit;credit in cash;600.00;600.00;;;
+1548751;5270;930214;credit;collection from another bank;44749.00;80808.20;;IJ;80269753
+3123297;10364;930216;credit;credit in cash;4200.00;19793.00;;;
+1657169;5622;930218;credit;credit in cash;24023.00;24723.00;;;
+1122555;3834;930218;credit;credit in cash;6600.00;21175.00;;;
+1657174;5622;930219;credit;credit in cash;33410.00;58133.00;;;
+1450014;4937;930220;credit;credit in cash;700.00;700.00;;;
+2810462;9307;930223;credit;credit in cash;7100.00;13282.80;;;
+2797779;9265;930223;credit;credit in cash;28361.00;28661.00;;;
+1736950;5891;930224;withdrawal;withdrawal in cash;4500.00;28994.00;;;
+1911147;6473;930225;withdrawal;withdrawal in cash;8900.00;36168.00;;;
+1910783;6473;930225;credit;credit in cash;23990.00;45068.00;;;
+2242710;7401;930226;credit;credit in cash;1100.00;1100.00;;;
+276;2;930226;credit;credit in cash;1100.00;1100.00;;;
+726514;2486;930227;credit;credit in cash;200.00;200.00;;;
+3673340;5891;930228;credit;;21.60;29015.60;interest credited;;
+3453600;6473;930228;credit;;102.00;36270.00;interest credited;;
+3509732;9265;930228;credit;;21.30;28707.90;interest credited;;
+3520588;10364;930228;credit;;38.30;19831.30;interest credited;;
+3657066;3834;930228;credit;;34.70;21209.70;interest credited;;
+3589600;1801;930228;credit;;2.90;702.90;interest credited;;
+3556862;813;930228;credit;;35.50;13289.50;interest credited;;
+527456;1801;930228;credit;credit in cash;18972.00;19674.90;;;
+1450025;4937;930228;credit;credit in cash;44455.00;45161.70;;;
+3669815;5270;930228;credit;;268.50;81076.70;interest credited;;
+3671894;5622;930228;credit;;90.20;58223.20;interest credited;;
+3667903;4937;930228;credit;;6.70;706.70;interest credited;;
+3492040;7753;930228;credit;;119.60;47385.60;interest credited;;
+3479817;9307;930228;credit;;25.80;13308.60;interest credited;;
+3479717;9265;930228;credit;;25.60;28686.60;interest credited;;
+3528743;11265;930228;credit;;43.90;18461.80;interest credited;;
+542076;1843;930301;credit;credit in cash;3900.00;22532.00;;;
+1450026;4937;930304;credit;credit in cash;8813.00;53974.70;;;
+2797781;9265;930304;credit;credit in cash;37305.00;66012.90;;;
+2442346;8051;930305;credit;collection from another bank;26040.00;26240.00;;KL;35675579
+1910797;6473;930305;credit;credit in cash;42227.00;78497.00;;;
+1935476;6555;930305;credit;credit in cash;300.00;300.00;;;
+3393741;11265;930305;credit;credit in cash;7618.00;26079.80;;;
+2798252;9265;930306;withdrawal;withdrawal in cash;19000.00;47012.90;;;
+541684;1843;930307;credit;collection from another bank;17632.00;40164.00;;QR;76294219
+3122927;10364;930307;credit;credit in cash;14493.00;34324.30;;;
+2775582;9188;930307;credit;collection from another bank;12710.00;13510.00;;GH;78292494
+789769;2694;930308;credit;credit in cash;700.00;700.00;;;
+2442701;8051;930309;withdrawal;withdrawal in cash;700.00;25540.00;;;
+2350078;7753;930310;withdrawal;withdrawal in cash;12000.00;35385.60;;;
+1657645;5622;930310;withdrawal;withdrawal in cash;14900.00;43323.20;;;
+789772;2694;930310;credit;credit in cash;17585.00;18285.00;;;
+2776158;9188;930310;credit;credit in cash;3700.00;17210.00;;;
+237652;813;930311;credit;collection from another bank;12154.00;25443.50;;QR;19537103
+1736610;5891;930312;credit;collection from another bank;32594.00;61609.60;;CD;51054984
+237946;813;930312;credit;credit in cash;700.00;26143.50;;;
+1074957;3674;930312;credit;credit in cash;1000.00;1000.00;;;
+2242713;7401;930312;credit;collection from another bank;20236.00;21336.00;;ST;66487163
+279;2;930312;credit;collection from another bank;20236.00;21336.00;;ST;66487163
+1121966;3834;930312;credit;credit in cash;13875.00;35084.70;;;
+3314627;11013;930313;credit;collection from another bank;42244.00;42844.00;;YZ;45816707
+2910390;9640;930313;credit;collection from another bank;19106.00;19106.00;;UV;13876933
+2910387;9640;930313;credit;credit in cash;1100.00;20206.00;;;
+1548752;5270;930314;credit;collection from another bank;44749.00;125825.70;;IJ;80269753
+1549099;5270;930314;withdrawal;withdrawal in cash;51700.00;74125.70;;;
+1549100;5270;930314;withdrawal;withdrawal in cash;25300.00;48825.70;;;
+1977570;6701;930315;credit;credit in cash;200.00;200.00;;;
+528025;1801;930315;credit;credit in cash;3700.00;23374.90;;;
+3394149;11265;930315;withdrawal;withdrawal in cash;800.00;25279.80;;;
+2349715;7753;930316;credit;credit in cash;36130.00;71515.60;;;
+3315106;11013;930316;withdrawal;withdrawal in cash;7000.00;35844.00;;;
+527446;1801;930316;credit;credit in cash;8368.00;31742.90;;;
+2809960;9307;930317;credit;credit in cash;16549.00;29857.60;;;
+2349722;7753;930318;credit;credit in cash;7824.00;79339.60;;;
+3123298;10364;930318;withdrawal;withdrawal in cash;4800.00;29524.30;;;
+2256133;7445;930318;credit;credit in cash;200.00;200.00;;;
+1779017;6034;930319;credit;credit in cash;200.00;200.00;;;
+3331510;11065;930319;credit;credit in cash;1100.00;1100.00;;;
+810128;2762;930320;credit;credit in cash;500.00;500.00;;;
+527466;1801;930320;credit;credit in cash;36574.00;68316.90;;;
+1122556;3834;930320;withdrawal;withdrawal in cash;6700.00;28384.70;;;
+1935491;6555;930321;credit;credit in cash;12801.00;13101.00;;;
+1602507;5442;930322;credit;credit in cash;300.00;300.00;;;
+523621;1787;930322;credit;credit in cash;1100.00;1100.00;;;
+1450518;4937;930322;withdrawal;withdrawal in cash;16400.00;37574.70;;;
